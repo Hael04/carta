@@ -1,1 +1,209 @@
-# carta
+html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💌 Un correo para Bocchi-san</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 1rem;
+      width: 100%;
+    }
+    .sc { display: none; width: 100%; animation: fi 0.7s ease; }
+    .sc.active { display: flex; flex-direction: column; align-items: center; }
+    .sc h2 { font-size: 1.4rem; font-weight: 700; color: #222; margin-bottom: 1rem; }
+    .ci { cursor: pointer; transition: transform 0.25s; display: block; }
+    .ci:hover { transform: scale(1.07); }
+    .hint { font-size: 0.82rem; color: #888; margin-top: 6px; }
+    .card-letter {
+      background: repeating-linear-gradient(#fff, #fff 28px, #d0d0d0 29px);
+      border-radius: 4px;
+      padding: 36px 44px;
+      border: 2px solid #ccc;
+      max-width: 480px;
+      width: 90%;
+      text-align: left;
+      box-shadow: 0 2px 16px rgba(0,0,0,.10);
+      background-color: #fff;
+      color: #333;
+    }
+    .card-letter h3 { font-family: 'Dancing Script', cursive; font-size: 2em; color: #1a4fa0; margin-bottom: 14px; }
+    .card-letter p { font-family: 'Dancing Script', cursive; font-size: 1.2em; line-height: 1.7; color: #333; margin: 7px 0; }
+    .pu {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: .95em;
+      color: #d4a000;
+      letter-spacing: 2px;
+      display: inline-block;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+    .rbtn {
+      margin-top: 18px;
+      padding: 10px 24px;
+      font-size: 1em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #1a4fa0;
+      color: #fff;
+      transition: background .2s;
+    }
+    .rbtn:hover { background: #0d2f66; }
+    @keyframes fi { from{opacity:0;transform:scale(.96)} to{opacity:1;transform:scale(1)} }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .bounce { animation: bounce 1.8s ease-in-out infinite; }
+    .s5row {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      justify-content: center;
+      width: 100%;
+      max-width: 660px;
+    }
+    .allm-side {
+      width: 130px;
+      flex-shrink: 0;
+      animation: bounce 1.8s ease-in-out infinite;
+      filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.18));
+      margin-bottom: 80px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Pantalla 1: Sonic -->
+  <div class="sc active" id="s1">
+    <h2>Hola, te llegó un correo</h2>
+    <svg class="ci" onclick="go(2)" width="210" height="230" viewBox="0 0 210 230" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="105" cy="220" rx="55" ry="8" fill="#aaa" opacity=".3"/>
+      <ellipse cx="78" cy="217" rx="20" ry="8" fill="#cc1111"/>
+      <ellipse cx="132" cy="217" rx="20" ry="8" fill="#cc1111"/>
+      <ellipse cx="78" cy="217" rx="14" ry="5" fill="#f0f0f0"/>
+      <ellipse cx="132" cy="217" rx="14" ry="5" fill="#f0f0f0"/>
+      <rect x="62" y="204" width="32" height="13" rx="6" fill="#f5ddb0"/>
+      <rect x="116" y="204" width="32" height="13" rx="6" fill="#f5ddb0"/>
+      <ellipse cx="75" cy="155" rx="14" ry="28" fill="#2277ee" transform="rotate(-12,75,155)"/>
+      <ellipse cx="135" cy="155" rx="14" ry="28" fill="#2277ee" transform="rotate(12,135,155)"/>
+      <ellipse cx="78" cy="198" rx="16" ry="9" fill="#f5ddb0"/>
+      <ellipse cx="132" cy="198" rx="16" ry="9" fill="#f5ddb0"/>
+      <ellipse cx="105" cy="155" rx="40" ry="45" fill="#2277ee"/>
+      <ellipse cx="105" cy="175" rx="28" ry="22" fill="#f5ddb0"/>
+      <ellipse cx="105" cy="108" rx="38" ry="42" fill="#2277ee"/>
+      <ellipse cx="105" cy="118" rx="26" ry="20" fill="#f5ddb0"/>
+      <path d="M68 100 Q60 88 65 78 Q68 72 75 76 Q70 82 72 92Z" fill="#111"/>
+      <path d="M69 99 Q62 88 66 79 Q69 74 75 77 Q71 83 73 91Z" fill="#2277ee"/>
+      <path d="M142 100 Q150 88 145 78 Q142 72 135 76 Q140 82 138 92Z" fill="#111"/>
+      <path d="M141 99 Q148 88 144 79 Q141 74 135 77 Q139 83 137 91Z" fill="#2277ee"/>
+      <path d="M84 80 Q90 60 105 58 Q120 60 126 80 Q118 72 105 70 Q92 72 84 80Z" fill="#111"/>
+      <path d="M84 80 Q90 62 105 60 Q120 62 126 80 Q118 74 105 72 Q92 74 84 80Z" fill="#2277ee"/>
+      <ellipse cx="80" cy="70" rx="8" ry="14" fill="#111" transform="rotate(-20,80,70)"/>
+      <ellipse cx="83" cy="66" rx="5" ry="10" fill="#2277ee" transform="rotate(-20,83,66)"/>
+      <ellipse cx="130" cy="70" rx="8" ry="14" fill="#111" transform="rotate(20,130,70)"/>
+      <ellipse cx="127" cy="66" rx="5" ry="10" fill="#2277ee" transform="rotate(20,127,66)"/>
+      <ellipse cx="91" cy="108" rx="11" ry="13" fill="#fff"/>
+      <ellipse cx="119" cy="108" rx="11" ry="13" fill="#fff"/>
+      <circle cx="93" cy="110" r="7" fill="#111"/>
+      <circle cx="121" cy="110" r="7" fill="#111"/>
+      <circle cx="95" cy="108" r="2.5" fill="#fff"/>
+      <circle cx="123" cy="108" r="2.5" fill="#fff"/>
+      <ellipse cx="86" cy="108" rx="5" ry="6" fill="#2277ee"/>
+      <ellipse cx="124" cy="108" rx="5" ry="6" fill="#2277ee"/>
+      <ellipse cx="105" cy="126" rx="7" ry="4" fill="#cc5566"/>
+      <path d="M98 130 Q105 135 112 130" stroke="#993344" stroke-width="1.5" fill="none"/>
+    </svg>
+    <p class="hint">Haz clic en Sonic</p>
+  </div>
+
+  <!-- Pantalla 2: carta -->
+  <div class="sc" id="s2">
+    <h2>¡Una cartita especial!</h2>
+    <svg class="ci bounce" onclick="go(3)" width="170" height="145" viewBox="0 0 170 145" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="28" width="154" height="108" rx="6" fill="#fff" stroke="#aaa" stroke-width="1.5"/>
+      <path d="M8 28 L85 88 L162 28" fill="none" stroke="#aaa" stroke-width="1.5"/>
+      <path d="M8 136 L58 90" fill="none" stroke="#ddd" stroke-width="1"/>
+      <path d="M162 136 L112 90" fill="none" stroke="#ddd" stroke-width="1"/>
+      <rect x="58" y="46" width="54" height="34" rx="3" fill="#2277ee"/>
+      <rect x="62" y="50" width="20" height="26" rx="2" fill="#fff" opacity=".7"/>
+      <rect x="86" y="50" width="20" height="26" rx="2" fill="#fff" opacity=".45"/>
+      <text x="85" y="70" text-anchor="middle" font-size="15" fill="#fff">💌</text>
+    </svg>
+    <p class="hint">Haz clic para continuar</p>
+  </div>
+
+  <!-- Pantalla 3: sobre cerrado -->
+  <div class="sc" id="s3">
+    <h2>¡Ábrelo!</h2>
+    <svg class="ci bounce" onclick="go(4)" width="170" height="148" viewBox="0 0 170 148" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="52" width="154" height="88" rx="6" fill="#fffbe6" stroke="#c8a000" stroke-width="1.5"/>
+      <path d="M8 52 L85 10 L162 52" fill="#ffe566" stroke="#c8a000" stroke-width="1.5"/>
+      <path d="M8 52 L85 100 L162 52" fill="#fff9cc" stroke="#c8a000" stroke-width="1"/>
+      <path d="M8 140 L58 100" fill="none" stroke="#e8cc00" stroke-width="1"/>
+      <path d="M162 140 L112 100" fill="none" stroke="#e8cc00" stroke-width="1"/>
+      <text x="85" y="42" text-anchor="middle" font-size="22">💛</text>
+    </svg>
+    <p class="hint">¿Qué habrá adentro?</p>
+  </div>
+
+  <!-- Pantalla 4: sobre abierto -->
+  <div class="sc" id="s4">
+    <h2>¡Ya casi!</h2>
+    <svg class="ci bounce" onclick="go(5)" width="170" height="162" viewBox="0 0 170 162" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="58" width="154" height="96" rx="6" fill="#fff" stroke="#2277ee" stroke-width="1.5"/>
+      <path d="M8 58 L85 18 L162 58" fill="#2277ee" stroke="#1a4fa0" stroke-width="1.5"/>
+      <rect x="28" y="80" width="114" height="11" rx="3" fill="#d0e4f8"/>
+      <rect x="28" y="98" width="114" height="11" rx="3" fill="#d0e4f8"/>
+      <rect x="28" y="116" width="74" height="11" rx="3" fill="#d0e4f8"/>
+      <text x="85" y="50" text-anchor="middle" font-size="18">📬</text>
+    </svg>
+    <p class="hint">¡Un último clic!</p>
+  </div>
+
+  <!-- Pantalla 5: carta + All Might imagen -->
+  <div class="sc" id="s5">
+    <h2>💌 Para ti</h2>
+    <div class="s5row">
+      <div class="card-letter">
+        <h3>Querido Bocchi,</h3>
+        <p>No sé muy bien cómo empezar esta carta, pero sentí que necesitaba escribirte ya que no puedo decírtelo en persona.</p>
+        <p><strong>¡FELICIDADES!</strong> Me alegra muchísimo saber que aprobaste tu tesina. Sé que no nos conocemos del todo, pero son noticias que alegran bastante y llenan de orgullo a quienes te conocemos.</p>
+        <p>Mereces este reconocimiento. Tu dedicación y constancia son una inspiración.</p>
+        <p>Estoy segura de que este es el comienzo de muchas cosas grandes que están por venir.</p>
+        <p><span class="pu">¡VE MÁS ALLÁ! ¡PLUS ULTRA!</span> 💪</p>
+        <p>Con mucho cariño, Latte-chan 💌</p>
+      </div>
+      <img class="allm-side" src="allmight.png" alt="All Might" />
+    </div>
+    <button class="rbtn" onclick="go(1)">↩ Regresar</button>
+  </div>
+
+</div>
+<script>
+  function go(n) {
+    document.querySelectorAll('.sc').forEach(s => s.classList.remove('active'));
+    document.getElementById('s' + n).classList.add('active');
+  }
+</script>
+</body>
+</html>
